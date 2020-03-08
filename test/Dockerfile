@@ -15,6 +15,7 @@ RUN apt-get update && \
 RUN pip3 install --upgrade pip
 RUN	pip3 install --no-cache-dir requests awscli
 
+
 ### Add s3 run script
 
 ADD run.sh /home
