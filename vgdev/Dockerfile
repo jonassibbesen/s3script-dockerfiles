@@ -1,4 +1,4 @@
-FROM quay.io/vgteam/vg:ci-1592-ead8980664a73024fddc01e862633a3a50db64a3
+FROM quay.io/vgteam/vg:ci-1659-05a463a17f7432963d557b49e8b7b01475ec1951
 
 MAINTAINER jsibbese@ucsc.edu
 
@@ -8,7 +8,7 @@ WORKDIR /home
 
 RUN apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-	wget time git unzip autoconf automake make cmake gcc g++ \
+	wget time git unzip autoconf automake make cmake gcc g++ gdb \
 	python2.7 python-pip python-setuptools python3 python3-pip python3-setuptools && \
     rm -rf /var/lib/apt/lists/*
 
