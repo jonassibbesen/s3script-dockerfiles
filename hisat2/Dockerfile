@@ -9,7 +9,6 @@ WORKDIR /home
 RUN wget --no-check-certificate https://cloud.biohpc.swmed.edu/index.php/s/hisat2-220-Linux_x86_64/download && \
 	unzip download && \
 	cd hisat2-2.2.0 && \
-	make && \
 	mv hisat2 /usr/bin/ && \
 	mv hisat2-* /usr/bin/ && \
 	mkdir -p /scripts/hisat2/ && \
