@@ -11,8 +11,8 @@ RUN wget --no-check-certificate https://cloud.biohpc.swmed.edu/index.php/s/hisat
 	cd hisat2-2.2.0 && \
 	mv hisat2 /usr/bin/ && \
 	mv hisat2-* /usr/bin/ && \
+	mv *py /usr/bin/ && \
 	mkdir -p /scripts/hisat2/ && \
-	mv *py /scripts/hisat2/ && \
 	mv scripts/* /scripts/hisat2/ && \
 	mv hisatgenotype_*/* /scripts/hisat2/ && \
 	cd .. && \
