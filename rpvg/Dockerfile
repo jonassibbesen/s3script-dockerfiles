@@ -15,7 +15,7 @@ RUN apt-get update && \
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
-	git checkout 686bea6d06cac203e3473e8ce240cbed9273327a && \
+	git checkout c93003fa677e4bee93df3484d135ec4cae1ac70d && \
 	cmake . && \
 	make && \
 	cd ..
