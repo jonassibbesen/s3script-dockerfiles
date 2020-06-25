@@ -11,6 +11,8 @@ RUN apt-get update && \
 	pkg-config protobuf-compiler libprotoc-dev libprotobuf-dev && \
     rm -rf /var/lib/apt/lists/*
 
+WORKDIR /
+
 ### Install rpvg 
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
@@ -19,3 +21,5 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	cmake . && \
 	make && \
 	cd ..
+
+WORKDIR /home
