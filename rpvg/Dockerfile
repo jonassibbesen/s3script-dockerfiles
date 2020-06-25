@@ -18,6 +18,4 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	git checkout 686bea6d06cac203e3473e8ce240cbed9273327a && \
 	cmake . && \
 	make && \
-	mv bin/* /usr/bin/ && \
-	cd .. && \
- 	rm -r rpvg
+	cd ..
