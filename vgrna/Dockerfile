@@ -11,10 +11,10 @@ RUN apt-get update && \
 	r-base r-base-dev && \
     rm -rf /var/lib/apt/lists/*
 
-### Install pysam
+### Install pysam and biopython
 
 RUN pip3 install --upgrade pip
-RUN	pip3 install --no-cache-dir pysam
+RUN	pip3 install --no-cache-dir pysam biopython
 
 ### Install vgrna scripts 
 
