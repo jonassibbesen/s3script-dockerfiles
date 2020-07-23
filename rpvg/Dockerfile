@@ -17,7 +17,7 @@ WORKDIR /
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
-	git checkout eb14ac9eb8883d93343cddbe7db25ad492354229 && \
+	git checkout 01bb2065f7a3aa2bdcdb1d5f4f9fd39f718a21fc && \
 	cmake . && \
 	make && \
 	cd ..
