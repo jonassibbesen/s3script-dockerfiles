@@ -1,4 +1,4 @@
-FROM jsibbesen/base-s3script:18.04-s1
+FROM jsibbesen/vg-s3script:1.25.0-s1
 
 MAINTAINER jsibbese@ucsc.edu
 
@@ -17,7 +17,7 @@ WORKDIR /
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
-	git checkout d9ea4d87b2a8a6da40aebce6fa6d13481f631ec8 && \
+	git checkout ecd35c73b10dbd64860f31802453f18de19d92e4 && \
 	cmake . && \
 	make && \
 	cd ..
