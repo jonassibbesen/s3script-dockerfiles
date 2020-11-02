@@ -1,4 +1,4 @@
-FROM quay.io/vgteam/vg:ci-2493-cf189f38eddd161cd4d37c5f9c8b890e10b335d2
+FROM jsibbesen/vgdev-s3script:cf189f38-s1
 
 MAINTAINER jsibbese@ucsc.edu
 
