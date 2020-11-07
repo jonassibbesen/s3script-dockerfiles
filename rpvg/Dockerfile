@@ -8,7 +8,7 @@ WORKDIR /home
 
 RUN apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-	pkg-config protobuf-compiler libprotoc-dev libprotobuf-dev && \
+	pkg-config protobuf-compiler libprotoc-dev libprotobuf-dev libjansson-dev && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
