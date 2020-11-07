@@ -13,6 +13,16 @@ RUN apt-get update && \
 
 WORKDIR /
 
+### Install newer htslib 
+
+RUN wget --no-check-certificate https://github.com/samtools/htslib/releases/download/1.11/htslib-1.11.tar.bz2 && \
+	tar -xvjf htslib-1.11.tar.bz2 && \
+	cd htslib-1.11 && \
+	./configure && \
+	make install && \
+ 	cd .. && \
+ 	rm -r *
+
 ### Install rpvg 
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
