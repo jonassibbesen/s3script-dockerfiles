@@ -21,7 +21,7 @@ RUN wget --no-check-certificate https://github.com/samtools/htslib/releases/down
 	./configure && \
 	make install && \
  	cd .. && \
- 	rm -r *
+ 	rm -r htslib*
 
 ### Install rpvg 
 
@@ -31,5 +31,3 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	cmake . && \
 	make && \
 	cd ..
-
-WORKDIR /home
