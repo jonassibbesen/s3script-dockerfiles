@@ -11,8 +11,6 @@ RUN apt-get update && \
 	pkg-config protobuf-compiler libprotoc-dev libprotobuf-dev libjansson-dev && \
     rm -rf /var/lib/apt/lists/*
 
-WORKDIR /
-
 ### Install newer htslib 
 
 RUN wget --no-check-certificate https://github.com/samtools/htslib/releases/download/1.11/htslib-1.11.tar.bz2 && \
@@ -23,6 +21,8 @@ RUN wget --no-check-certificate https://github.com/samtools/htslib/releases/down
  	cd .. && \
  	rm -r htslib*
 
+WORKDIR /
+
 ### Install rpvg 
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
@@ -31,3 +31,5 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	cmake . && \
 	make && \
 	cd ..
+
+WORKDIR /home
