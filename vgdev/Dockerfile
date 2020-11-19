@@ -1,4 +1,4 @@
-FROM quay.io/vgteam/vg:ci-2532-9e357f0c6b70e9f1240c8db4cd3b28b9e6411791
+FROM quay.io/vgteam/vg:ci-2536-3cfec344f1a65643495ff512d9c1e58aed1cd917
 
 MAINTAINER jsibbese@ucsc.edu
 
