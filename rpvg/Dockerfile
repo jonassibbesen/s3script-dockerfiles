@@ -1,4 +1,4 @@
-FROM jsibbesen/vgdev-s3script:cf189f38-s1
+FROM quay.io/jsibbesen/vgdev-s3script:vgdev-515a4595-s1
 
 MAINTAINER jsibbese@ucsc.edu
 
