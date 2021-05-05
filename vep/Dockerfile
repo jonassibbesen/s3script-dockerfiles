@@ -2,6 +2,7 @@ FROM ensemblorg/ensembl-vep:release_103.1
 
 MAINTAINER jsibbese@ucsc.edu
 
+USER root
 WORKDIR /home
 
 ### Install essential tools
