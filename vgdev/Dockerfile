@@ -12,8 +12,10 @@ RUN apt-get update && \
 	python2.7 python-setuptools python3 python3-pip python3-setuptools && \
     rm -rf /var/lib/apt/lists/*
 
+RUN ln -s /usr/bin/python2 /usr/bin/python
+
 RUN pip3 install --upgrade pip
-RUN	pip3 install --no-cache-dir requests awscli
+RUN pip3 install --no-cache-dir requests awscli
 
 ### Install htslib 
 
