@@ -20,6 +20,6 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	mkdir build && \
 	cd build && \
 	cmake .. && \
-	make && \
+	make -j 4 && \
 	cd ../../ && \
 	mv rpvg/bin/rpvg /usr/bin/
