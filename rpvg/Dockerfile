@@ -1,4 +1,4 @@
-FROM mirror.gcr.io/library/ubuntu:20.04
+FROM quay.io/jsibbesen/base-s3script:base-20.04-s2
 
 MAINTAINER jsibbese@ucsc.edu
 
@@ -11,16 +11,15 @@ RUN apt-get update && \
 	pkg-config protobuf-compiler libprotoc-dev libprotobuf-dev libjansson-dev && \
     rm -rf /var/lib/apt/lists/*
 
-WORKDIR /
-
 ### Install rpvg 
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
 	git checkout 81ea2f25b840c3a5bb05257a104c83ce6ba7a8ab && \
 	GIT_SSL_NO_VERIFY=true git submodule update --init --recursive && \
-	cmake . && \
-	make -j 4 && \
-	cd ..
-
-WORKDIR /home
+	mkdir build && \
+	cd build && \
+	cmake .. && \
+	make && \
+	cd ../../ && \
+	mv rpvg/bin/rpvg /usr/bin/

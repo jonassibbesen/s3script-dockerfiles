@@ -8,9 +8,11 @@ WORKDIR /home
 
 RUN apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-	wget time git unzip autoconf automake make cmake gcc g++ \
-	python2.7 python-pip python-setuptools python3 python3-pip python3-setuptools && \
+	wget time git unzip autoconf automake make cmake gcc g++ gdb \
+	python2.7 python-setuptools python3 python3-pip python3-setuptools && \
     rm -rf /var/lib/apt/lists/*
+
+RUN ln -s /usr/bin/python2 /usr/bin/python
 
 RUN pip3 install --upgrade pip
 RUN	pip3 install --no-cache-dir requests awscli
