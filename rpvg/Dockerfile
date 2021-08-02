@@ -1,4 +1,4 @@
-FROM quay.io/jsibbesen/vgdev-s3script:vgdev-c4bbd63b-s1
+FROM mirror.gcr.io/library/ubuntu:20.04
 
 MAINTAINER jsibbese@ucsc.edu
 
@@ -20,7 +20,7 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	git checkout 81ea2f25b840c3a5bb05257a104c83ce6ba7a8ab && \
 	GIT_SSL_NO_VERIFY=true git submodule update --init --recursive && \
 	cmake . && \
-	make -j 2 && \
+	make -j 4 && \
 	cd ..
 
 WORKDIR /home
