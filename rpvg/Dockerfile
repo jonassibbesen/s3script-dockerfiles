@@ -20,7 +20,7 @@ RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbese
 	git checkout 81ea2f25b840c3a5bb05257a104c83ce6ba7a8ab && \
 	GIT_SSL_NO_VERIFY=true git submodule update --init --recursive && \
 	cmake . && \
-	make && \
+	make -j 2 && \
 	cd ..
 
 WORKDIR /home
