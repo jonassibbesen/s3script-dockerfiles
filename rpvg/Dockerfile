@@ -15,11 +15,12 @@ RUN apt-get update && \
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
-	git checkout ce2677e061d56519ae5a66d9b0d3dd586ea17ceb && \
+	git checkout 8ea29b5d3ccc704fb0fa269f1ef5b910bbabc843 && \
 	GIT_SSL_NO_VERIFY=true git submodule update --init --recursive && \
 	mkdir build && \
 	cd build && \
 	cmake .. && \
 	make && \
 	cd ../../ && \
-	mv rpvg/bin/rpvg /usr/bin/
+	mv rpvg/bin/rpvg /usr/bin/ && \
+	unlink rpvg/deps/libvgio/vg
