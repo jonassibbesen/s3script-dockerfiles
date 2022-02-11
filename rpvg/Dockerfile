@@ -15,7 +15,7 @@ RUN apt-get update && \
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
-	git checkout e563a7376c937994f4a2112428e7cea133ebd5d3 && \
+	git checkout cbb50c79cd36ca9db3b0b51cf68cfc3328834f3d && \
 	GIT_SSL_NO_VERIFY=true git submodule update --init --recursive && \
 	mkdir build && \
 	cd build && \
