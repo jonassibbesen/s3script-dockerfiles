@@ -1,4 +1,4 @@
-FROM quay.io/jsibbesen/vgdev-s3script:vgdev-385fd636-s2
+FROM quay.io/jsibbesen/vgdev-s3script:vgdev-cb090f0c-s2
 
 MAINTAINER jsibbese@ucsc.edu
 
@@ -15,7 +15,7 @@ RUN apt-get update && \
 
 RUN GIT_SSL_NO_VERIFY=true git clone --recursive https://github.com/jonassibbesen/rpvg.git && \
 	cd rpvg && \
-	git checkout a3fffb045985d40dfc1cec8fd7bf880a55fed7e7 && \
+	git checkout 0380bdb172bbe255a18ed070935fa0013dc02548 && \
 	GIT_SSL_NO_VERIFY=true git submodule update --init --recursive && \
 	mkdir build && \
 	cd build && \
