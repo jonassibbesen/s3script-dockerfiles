@@ -1,4 +1,4 @@
-FROM quay.io/jsibbesen/vgdev-s3script:vgdev-85efb279-s2
+FROM quay.io/jsibbesen/vgdev-s3script:vgdev-2cea1e25-s2
 
 MAINTAINER jsibbese@ucsc.edu
 
